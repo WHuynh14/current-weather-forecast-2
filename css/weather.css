@@ -22,12 +22,20 @@ body {
   padding: 30px 150px;
 }
 
-.container {
+.container-top {
   border: 2px solid #a2a8d3;
   padding: 50px 50px;
   max-width: 1000px;
   background-color: white;
   box-shadow: 10px 10px 10px rgba(209, 206, 208, 1);
+}
+
+.container-bottom {
+  border: 2px solid #a2a8d3;
+  padding: 25px;
+  margin: 10px 0px;
+  max-width: 1000px;
+  background-color: white;
 }
 
 .row-1 {
