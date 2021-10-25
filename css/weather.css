@@ -1,0 +1,84 @@
+h1 {
+  color: black;
+  text-align: center;
+  font-size: 36px;
+  font-family: "Comfortaa", cursive;
+}
+
+#date-now {
+  color: black;
+  background: #a2a8d3;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(209, 206, 208, 1);
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  font-family: "Balsamiq Sans", cursive;
+  margin-bottom: 25px;
+}
+
+body {
+  background: lavender;
+  padding: 30px 150px;
+}
+
+.container {
+  border: 2px solid #a2a8d3;
+  padding: 20px 50px;
+  max-width: 800px;
+  background-color: white;
+  box-shadow: 10px 10px 10px rgba(209, 206, 208, 1);
+}
+
+.row-1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.row-2 {
+  text-align: center;
+}
+.rows {
+  border: 2px solid #a2a8d3;
+  padding: 30px;
+  font-size: 20px;
+  font-family: "Comfortaa", cursive;
+}
+
+.card {
+  text-align: center;
+}
+
+.card-subtitle {
+  font-size: 18px;
+  font-family: "Comfortaa", cursive;
+}
+
+.emoji {
+  font-size: 30px;
+}
+
+.card-text {
+  font-size: 14px;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+#current {
+  margin: 5px 0px;
+}
+
+#code-link {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+#search {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+#current-location-button {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}

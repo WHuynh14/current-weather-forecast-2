@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Comfortaa:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Wendy's Weather App</title>
+    <link rel="stylesheet" href="css/weather.css" />
+  </head>
+  <body>
+    <h1>Hello, where would you like to explore?</h1>
+    <div class="container">
+      <!--       
+      <form id="city-country-form">
+        <div class="row search">
+          <div class="col-12">
+            <div class="mb-3">
+              <input
+                type="text"
+                placeholder="Enter City Name"
+                class="form-control"
+                id="city-text-input"
+              />
+            </div>
+
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-success" id="search">Search</button>
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-primary" id="current-location-button">Current Location</button>
+          </div>
+        </div>
+      </form>
+      
+      <br />
+      <br />
+     <div class="row">
+<div class = "column" id="date-now">
+Monday October 4, 2021 at 9:24PM
+</div>
+     </div>
+<div class="rows">     
+<div class="row row-1">
+        <div class="col-4" id="city-name"></div>
+        <div class="col-4" id="temp-high-now"></div>
+        <div class="col-4" id="wind">Windspeed:</div>
+      </div>
+
+      <div class="row row-2">
+        <div class="col-4" id="temp-now"></div>
+        <div class="col-4" id="temp-low-now"></div>
+        <div class="col-4" id="humidity">Humidity:</div>
+      </div>
+      </div>
+
+      <br /> -->
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            Hi I love dogs, how about you YAAAAAAAAAAAy where are my documents
+            in los angeles where the birds roam free
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                Hello how about you YAAAAAAAAAAAy where are my documents in los
+                angeles where the birds roam free
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                What's up? how about you YAAAAAAAAAAAy where are my documents in
+                los angeles where the birds roam free
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title emoji">☁️</h5>
+              <h6 class="card-subtitle mb-2 text-muted">High: 64°F</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Low: 54°F</h6>
+              <p class="card-text">
+                Tuesday
+                <br />
+                October 5, 2021
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+      <!-- <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title emoji">☁️</h5>
+              <h6 class="card-subtitle mb-2 text-muted">High: 64°F</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Low: 55°F</h6>
+              <p class="card-text">
+                Wednesday
+                <br />
+                October 6, 2021
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+      <!-- <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title emoji">☁️</h5>
+              <h6 class="card-subtitle mb-2 text-muted">High: 61°F</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Low: 54°F</h6>
+              <p class="card-text">
+                Thursday
+                <br />
+                October 7, 2021
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+      <!-- <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title emoji">⛅️</h5>
+             <h6 class="card-subtitle mb-2 text-muted">High: 63°F</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Low: 52°F</h6>
+              <p class="card-text">
+                Thursday
+                <br />
+                October 8, 2021
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+      <!-- <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title emoji">☀️</h5>
+              <h6 class="card-subtitle mb-2 text-muted">High: 66°F</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Low: 52°F</h6>
+              <p class="card-text">
+                Friday
+                <br />
+                October 9, 2021
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+      <!-- <p id="code-link">
+  <a href="https://github.com/WHuynh14/current-weather-forecast"> Open-source code</a> 
+  by Wendy H. </p>
+
+
+        </div>
+      </div>
+    </div>
+
+
+    
+</div>
+<script src="js/weather.js"></script>
+  </body>
+</html> -->
+    </div>
+  </body>
+</html>
