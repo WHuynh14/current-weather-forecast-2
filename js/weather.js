@@ -47,6 +47,7 @@ function displayWeather(response) {
   let unitsFahrenheit = "°F";
   let percentage = "%";
   let speed = "mi/h";
+  console.log(response.data);
 
   let tempNowValue = Math.round(response.data.main.temp);
   document.querySelector(
@@ -70,6 +71,16 @@ function displayWeather(response) {
 
   let windSpeed = Math.round(response.data.wind.speed);
   document.querySelector("#wind").innerHTML = `Windspeed: ${windSpeed}${speed}`;
+
+  let descriptionElement = document.querySelector("#weather-description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
@@ -127,4 +138,4 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 // let currentLocationButton = document.querySelector("current-location-button");
 // currentLocationButton.addEventListener("click", displayCurrentLocation);
 
-searchCity("Seattle");
+searchCity("Tokyo");

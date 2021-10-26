@@ -102,6 +102,11 @@ body {
   padding: 10px;
 }
 
+#weather-icon {
+  display: block;
+  margin: 0 auto;
+}
+
 .twin {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -115,4 +120,8 @@ body {
   font-weight: bold;
   font-size: 26px;
   font-family: "Comfortaa", cursive;
+}
+
+#weather-description {
+  text-transform: capitalize;
 }
