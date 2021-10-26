@@ -108,28 +108,6 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-// function searchLocation(position) {
-//   let apiKey = "502dc8f7ae36e57af1974e18d16a86f8";
-//   let units = "imperial";
-//   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
-//   axios.get(apiUrl).then(displayWeather);
-// }
-
-// function displayCurrentLocation(event) {
-//   event.preventDefault();
-//   navigator.geolocation.displayCurrentPosition(searchLocation);
-// }
-
-// function search(event) {
-//   event.preventDefault();
-//   let apiKey = "502dc8f7ae36e57af1974e18d16a86f8";
-//   let city = document.querySelector("#city-text-input").value;
-//   let units = "imperial";
-//   let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
-//   axios.get(apiUrl).then(displayWeather);
-
-// }
-
 let form = document.querySelector("#city-country-form");
 form.addEventListener("submit", displaySubmit);
 
