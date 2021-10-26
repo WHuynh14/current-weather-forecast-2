@@ -72,33 +72,64 @@ Monday October 4, 2021 at 9:24PM
 
       <br /> -->
     <div class="container container-top">
-      <div class="row">
-        <div class="col-md-12 long">
-          <div class="card">
-            0 Test Test Test Test Test Test Test Test Test Test Test Test Test
-            Test Test Test Test Test Test Test Test
+      <form id="city-country-form">
+        <div class="row search">
+          <div class="col-12">
+            <div class="mb-3">
+              <input
+                type="text"
+                placeholder="Enter City Name"
+                class="form-control"
+                id="city-text-input"
+              />
+            </div>
+          </div>
+          <div class="col-1">
+            <button type="submit" class="btn btn-success" id="search">
+              Search
+            </button>
+          </div>
+          <div class="col-1">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="current-location-button"
+            >
+              Current Location
+            </button>
           </div>
         </div>
+      </form>
+
+      <div class="row">
+        <div class="column" id="date-now">Monday October 4, 2021 at 9:24PM</div>
+      </div>
+      <div class="row">
         <div class="col-md-5">
           <div class="card">
-            1 Test Test Test Test Test Test Test Test Test Test Test Test Test
-            Test Test Test Test Test Test Test Test
+            <div id="city-name">TESTING HELLO CITY NAME</div>
+            <br />
+            <div id="temp-now">TESTING HELLO TEMP NOW</div>
+            <br />
+            <div id="weather-description">TESTING DESCRIPTION</div>
           </div>
         </div>
         <div class="col-md-7">
           <div class="row twin">
             <div class="col">
               <div class="card">
-                2 Test Test Test Test Test Test Test Test Test Test Test Test
-                Test Test Test Test Test Test Test Test Test
+                <div id="temp-high-now">High:</div>
+                <br />
+                <div id="temp-low-now">Low:</div>
               </div>
             </div>
           </div>
           <div class="row twin">
             <div class="col">
               <div class="card">
-                3 Test Test Test Test Test Test Test Test Test Test Test Test
-                Test Test Test Test Test Test Test Test Test
+                <div id="wind">Windspeed:</div>
+                <br />
+                <div id="humidity">Humidity:</div>
               </div>
             </div>
           </div>
@@ -164,8 +195,18 @@ Monday October 4, 2021 at 9:24PM
           </div>
         </div>
       </div>
+      <p id="code-link">
+        <a href="https://github.com/WHuynh14/current-weather-forecast-2">
+          Open-source code</a
+        >
+        by Wendy H.
+      </p>
     </div>
-    <!-- <div class="row">
+
+    <script src="js/weather.js"></script>
+  </body>
+</html>
+<!-- <div class="row">
         <div class="col">
           <div class="card">
             <div class="card-body">
@@ -181,7 +222,7 @@ Monday October 4, 2021 at 9:24PM
           </div>
         </div> -->
 
-    <!-- <div class="col">
+<!-- <div class="col">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title emoji">☁️</h5>
@@ -196,7 +237,7 @@ Monday October 4, 2021 at 9:24PM
           </div>
         </div> -->
 
-    <!-- <div class="col">
+<!-- <div class="col">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title emoji">☁️</h5>
@@ -211,7 +252,7 @@ Monday October 4, 2021 at 9:24PM
           </div>
         </div> -->
 
-    <!-- <div class="col">
+<!-- <div class="col">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title emoji">⛅️</h5>
@@ -226,7 +267,7 @@ Monday October 4, 2021 at 9:24PM
           </div>
         </div> -->
 
-    <!-- <div class="col">
+<!-- <div class="col">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title emoji">☀️</h5>
@@ -241,9 +282,7 @@ Monday October 4, 2021 at 9:24PM
           </div>
         </div> -->
 
-    <!-- <p id="code-link">
-  <a href="https://github.com/WHuynh14/current-weather-forecast"> Open-source code</a> 
-  by Wendy H. </p>
+<!-- 
 
 
         </div>
@@ -256,5 +295,3 @@ Monday October 4, 2021 at 9:24PM
 <script src="js/weather.js"></script>
   </body>
 </html> -->
-  </body>
-</html>
