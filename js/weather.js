@@ -1,4 +1,3 @@
-// Feature 1
 let now = new Date();
 
 let dateNow = document.querySelector("#date-now");
@@ -46,31 +45,28 @@ function displayWeather(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
   let unitsFahrenheit = "°F";
   let percentage = "%";
-  let speed = "mi/h";
-  console.log(response.data);
+  // let speed = "mi/h";
 
-  let tempNowValue = Math.round(response.data.main.temp);
-  document.querySelector(
-    "#temp-now"
-  ).innerHTML = `${tempNowValue}${unitsFahrenheit}`;
+  let tempNowValue = document.querySelector("#temp-now");
+  fahrenheitTemperature = response.data.main.temp;
+  tempNowValue.innerHTML = Math.round(fahrenheitTemperature);
 
-  let tempHighValue = Math.round(response.data.main.temp_max);
-  document.querySelector(
-    "#temp-high-now"
-  ).innerHTML = `High: ${tempHighValue}${unitsFahrenheit}`;
+  let tempHighValue = document.querySelector("#temp-high-now");
+  fahrenheitHighTemperature = response.data.main.temp_max;
+  tempHighValue.innerHTML = `High: ${Math.round(fahrenheitHighTemperature)}°F`;
 
-  let tempLowValue = Math.round(response.data.main.temp_min);
-  document.querySelector(
-    "#temp-low-now"
-  ).innerHTML = `Low: ${tempLowValue}${unitsFahrenheit}`;
+  let tempLowValue = document.querySelector("#temp-low-now");
+  fahrenheitLowTemperature = response.data.main.temp_min;
+  tempLowValue.innerHTML = `Low: ${Math.round(fahrenheitLowTemperature)}°F`;
 
   let humidity = Math.round(response.data.main.humidity);
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${humidity}${percentage}`;
 
-  let windSpeed = Math.round(response.data.wind.speed);
-  document.querySelector("#wind").innerHTML = `Windspeed: ${windSpeed}${speed}`;
+  let windNow = document.querySelector("#wind");
+  windSpeedImperial = response.data.wind.speed;
+  windNow.innerHTML = `Windspeed: ${Math.round(windSpeedImperial)}mi/h`;
 
   let descriptionElement = document.querySelector("#weather-description");
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -108,12 +104,43 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let tempNowValue = document.querySelector("#temp-now");
+  let celsiusTemperature = (fahrenheitTemperature - 32) * (5 / 9);
+  tempNowValue.innerHTML = Math.round(celsiusTemperature);
+
+  let tempHighValue = document.querySelector("#temp-high-now");
+  let celsiusHighTemperature = (fahrenheitHighTemperature - 32) * (5 / 9);
+  tempHighValue.innerHTML = `High: ${Math.round(celsiusHighTemperature)}°C`;
+
+  let tempLowValue = document.querySelector("#temp-low-now");
+  let celsiusLowTemperature = (fahrenheitLowTemperature - 32) * (5 / 9);
+  tempLowValue.innerHTML = `Low: ${Math.round(celsiusLowTemperature)}°C`;
+
+  let windNow = document.querySelector("#wind");
+  let windSpeedMetric = windSpeedImperial * 1.609;
+  windNow.innerHTML = `Windspeed: ${Math.round(windSpeedMetric)}km/h`;
+}
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let tempNowValue = document.querySelector("temp-now");
+  tempNowValue.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
 let form = document.querySelector("#city-country-form");
 form.addEventListener("submit", displaySubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-// let currentLocationButton = document.querySelector("current-location-button");
-// currentLocationButton.addEventListener("click", displayCurrentLocation);
 
 searchCity("Tokyo");
