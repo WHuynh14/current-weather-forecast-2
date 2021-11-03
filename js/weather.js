@@ -125,20 +125,29 @@ function displayCelsiusTemperature(event) {
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let tempNowValue = document.querySelector("temp-now");
+  let tempNowValue = document.querySelector("#temp-now");
   tempNowValue.innerHTML = Math.round(fahrenheitTemperature);
+
+  let tempHighValue = document.querySelector("#temp-high-now");
+  tempHighValue.innerHTML = `High: ${Math.round(fahrenheitHighTemperature)}°F`;
+
+  let tempLowValue = document.querySelector("#temp-low-now");
+  tempLowValue.innerHTML = `Low: ${Math.round(fahrenheitLowTemperature)}°F`;
+
+  let windNow = document.querySelector("#wind");
+  windNow.innerHTML = `Windspeed: ${Math.round(windSpeedImperial)}mi/h`;
 }
 
 let fahrenheitTemperature = null;
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+let form = document.querySelector("#city-country-form");
+form.addEventListener("submit", displaySubmit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-let form = document.querySelector("#city-country-form");
-form.addEventListener("submit", displaySubmit);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
