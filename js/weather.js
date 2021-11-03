@@ -107,6 +107,8 @@ function getCurrentLocation(event) {
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let tempNowValue = document.querySelector("#temp-now");
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   let celsiusTemperature = (fahrenheitTemperature - 32) * (5 / 9);
   tempNowValue.innerHTML = Math.round(celsiusTemperature);
 
@@ -126,6 +128,8 @@ function displayCelsiusTemperature(event) {
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let tempNowValue = document.querySelector("#temp-now");
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
   tempNowValue.innerHTML = Math.round(fahrenheitTemperature);
 
   let tempHighValue = document.querySelector("#temp-high-now");

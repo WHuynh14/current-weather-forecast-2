@@ -138,6 +138,12 @@ body {
   font-weight: bold;
 }
 
+.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
 #temp-high-now {
   font-size: 18px;
 }
