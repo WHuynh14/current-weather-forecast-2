@@ -1,46 +1,56 @@
 h1 {
   color: black;
   text-align: center;
-  font-size: 32px;
+  font-size: 25px;
   font-family: "Comfortaa", cursive;
-  margin: 15px;
+  padding: 10px 50px;
+  border: 2px solid #88bbd6;
+  border-radius: 10px;
+  max-width: 700px;
+  background-color: white;
+  margin: 10px auto;
 }
 
 #date-now {
   color: black;
-  background: #a2a8d3;
   border-radius: 5px;
   box-shadow: 3px 3px 3px rgba(209, 206, 208, 1);
-  padding: 20px;
+  border: 2px solid #88bbd6;
+  padding: 15px;
   text-align: center;
-  font-size: 28px;
+  font-size: 24px;
   font-family: "Balsamiq Sans", cursive;
-  margin-bottom: 25px;
+  margin: 25px 0px;
 }
 
 body {
-  background: lavender;
+  background: #e9e9e9;
   padding: 30px 150px;
+  justify-content: center;
+  background-image: url("../images/nature.svg");
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  background-position: center;
 }
 
 .container-top {
-  border: 2px solid #a2a8d3;
-  padding: 50px 50px;
+  border: 2px solid #88bbd6;
+  padding: 30px 50px 15px 50px;
   max-width: 700px;
   background-color: white;
   box-shadow: 10px 10px 10px rgba(209, 206, 208, 1);
+  border-radius: 10px;
 }
 
-.container-bottom {
-  border: 2px solid #a2a8d3;
+/* .container-bottom {
   background-color: white;
   max-height: 250px;
   margin-bottom: 20px;
 }
 
-.many {
+.forecast-days {
   padding: 20px 5px;
-}
+} */
 
 .row-1 {
   text-align: center;
@@ -49,12 +59,6 @@ body {
 
 .row-2 {
   text-align: center;
-}
-.rows {
-  border: 2px solid #a2a8d3;
-  padding: 30px;
-  font-size: 20px;
-  font-family: "Comfortaa", cursive;
 }
 
 .card {
@@ -75,31 +79,19 @@ body {
   font-family: "Balsamiq Sans", cursive;
 }
 
-#current {
-  margin: 5px 0px;
-}
-
 #code-link {
+  margin-top: 25px;
   margin-bottom: 15px;
   font-size: 14px;
   font-family: "Balsamiq Sans", cursive;
 }
 
 #search {
-  padding: 10px 15px;
-  margin-bottom: 10px;
   font-size: 14px;
 }
 
 #current-location-button {
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  margin-left: 30px;
   font-size: 14px;
-}
-
-#city-box {
-  padding: 10px;
 }
 
 #weather-icon {
@@ -107,21 +99,33 @@ body {
   margin: 0 auto;
 }
 
-.twin {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.long {
-  padding: 10px;
-}
-
 #city-name {
   font-weight: bold;
   font-size: 26px;
   font-family: "Comfortaa", cursive;
+  background: #88bbd6;
+  box-shadow: 3px 3px 3px rgba(209, 206, 208, 1);
 }
 
 #weather-description {
   text-transform: capitalize;
+}
+
+#right-top-box {
+  height: 115px;
+  border: 2px solid #88bbd6;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+#right-bottom-box {
+  height: 115px;
+  border: 2px solid #88bbd6;
+  padding: 20px;
+}
+
+#city-box {
+  border: 2px solid #88bbd6;
+  height: 250px;
+  padding: 20px;
 }
