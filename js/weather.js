@@ -41,6 +41,54 @@ let month = months[now.getMonth()];
 
 dateNow.innerHTML = `${day}, ${month} ${date}, ${year} at ${time}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecastHTML = `<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index > 0 && index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+    <div class="col forecast-days">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
+          <img src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
+          width="42" />
+
+          <p class="forecast">
+          <span id="forecast-high">${Math.round(forecastDay.temp.max)}° </span>
+          <span id="forecast-high">${Math.round(forecastDay.temp.min)}° </span>
+          </p>
+        </div>
+      </div>
+    </div>`;
+    }
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "502dc8f7ae36e57af1974e18d16a86f8";
+  let units = "imperial";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&&units=${units}`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeather(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
   let unitsFahrenheit = "°F";
@@ -77,6 +125,8 @@ function displayWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
