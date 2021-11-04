@@ -59,8 +59,8 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-    <div class="col forecast-days">
-      <div class="card">
+    <div class="col forecast-spacing">
+      <div class="card forecast-days">
         <div class="card-body">
           <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
           <img src="http://openweathermap.org/img/wn/${
@@ -69,7 +69,7 @@ function displayForecast(response) {
           width="42" />
 
           <p class="forecast">
-          <span id="forecast-high">${Math.round(forecastDay.temp.max)}° </span>
+          <span id="forecast-high">${Math.round(forecastDay.temp.max)}° |</span>
           <span id="forecast-high">${Math.round(forecastDay.temp.min)}° </span>
           </p>
         </div>

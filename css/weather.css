@@ -159,3 +159,11 @@ body {
 #humidity {
   font-size: 18px;
 }
+
+.forecast-spacing {
+  padding: 0px 3px;
+}
+
+.forecast-days {
+  border: 2px solid #88bbd6;
+}
