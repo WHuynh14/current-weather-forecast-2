@@ -93,7 +93,6 @@ function displayWeather(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
   let unitsFahrenheit = "°F";
   let percentage = "%";
-  // let speed = "mi/h";
 
   let tempNowValue = document.querySelector("#temp-now");
   fahrenheitTemperature = response.data.main.temp;
