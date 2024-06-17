@@ -82,7 +82,7 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  let apiKey = "502dc8f7ae36e57af1974e18d16a86f8";
+  let apiKey = "REDACTED";
   let units = "imperial";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&&units=${units}`;
 
